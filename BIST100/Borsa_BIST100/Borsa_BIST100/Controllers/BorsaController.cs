@@ -20,8 +20,6 @@ namespace Borsa_BIST100.Controllers
                 string response = await httpClient.GetStringAsync(apiUrl);
 
 
-                // JObject json = JObject.Parse(response);
-
                 JArray arr = JArray.Parse(response);
 
                 List<string> hisseList = new List<string>();
