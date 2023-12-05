@@ -1,0 +1,43 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    <script defer src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script defer src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script defer src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="~/js/site.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <table id="example" class="table table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Hisse</th>
+                    <th>Fiyat</th>
+                    <th>Degisim</th>
+                    <th>Fiyat Zaman</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @for (int i = 0; i < ViewBag.HisseList.Count; i++)
+                {
+                    <tr>
+                        <td>@ViewBag.HisseList[i]</td>
+                        <td>@ViewBag.FiyatList[i]</td>
+                        <td>@ViewBag.DegisimList[i]</td>
+                        <td>@ViewBag.SaatDeger[i]</td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+    </div>
+</body>
+</html>
